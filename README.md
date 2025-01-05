@@ -1,2 +1,3 @@
 # PK-PythonNotes
-My Pythin Notes 2025
+
+My Python Notes 2025
