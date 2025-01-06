@@ -1,3 +1,8 @@
+import debug_colours
+debug_colours.Colours
+
+from decimal import Decimal
+
 # print is basically the console.log of python as it prints my string to the console.
 print("This is a simple Python string")
 
@@ -200,3 +205,24 @@ print(z*3) # 9.0
 # In this instance, I can use the str() function to convert my integer to a string:
 print("X is: " +str(x)) # TypeError: can only concatenate str (not "float") to str
 print("Y is: " +str(x)) # Y is: 1.0
+#
+#
+# ======================
+#      USER INPUT
+# ======================
+#
+# With Python, I can use the input() function to get user input.
+# Like I learned in OOP/OOD: always helpful to let the user know what sort of input I'm expecting from them.
+# Since I'm expecting input from a user, I'll want to store that input into a variable
+# Kind of dodgy that I have to open another terminal window to be able to fuck with the input...
+print("========== USER INPUT ==========")
+name = input("Please enter your name: ")
+print("Hello, " +name)
+
+# Whenever I'm taking an input, it is **always a STRING data type**
+# So what if I want to accept an integer data type, like whe I'm expecting a number input when asking a user their age?
+# Then I want to take in that input, of the STRING data type
+# And then I _immediately__ cast that string input data type to an integer
+# But in order to use string concatenation, I have to convert it _BACK_ to a string
+age = int(input("Please enter your age: "))
+print("Hello, " +name, "you are " +str(age), "years old")
