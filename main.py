@@ -1,4 +1,5 @@
 import debug_colours
+import math
 debug_colours.Colours
 
 from decimal import Decimal
@@ -231,3 +232,39 @@ print("Hello, " +name, ", you are " +str(age), "years old")
 # Well, I need to typecast my input field as the _float_ data type to work around this
 height = float(input("Please enter your height in centimetres: "))
 print("Hello, " +name, ", you are " +str(age), "years old and " +str(height), "cm tall.")
+
+#
+#
+# ======================
+# MATHEMATICAL FUNCTIONS
+# ======================
+#
+print("========== MATHEMATICAL FUNCTIONS ==========")
+# Python has a built-in math module that provides mathematical functions and constants, I just have to import it at the top
+# I can use methods such as .round() to round DOWN a float to the nearest whole number
+pi = 3.14
+print(round(pi)) # 3
+
+# Having imported the math module, I can also use the .ceil() method to round UP a float to the nearest whole number
+# This is useful when I'm working with currency, as I can round up to the nearest dollar value amount
+print(math.ceil(pi)) # 4
+
+# Having imported the math module, I can also use the .floor() method to round DOWN a float to the nearest whole number
+print(math.floor(pi)) # 4
+
+# There's also the .abs() method, which tells me how far away from zero (0) a specified number is
+# So if I supply a _negative_ number, I will be returned a _positive_ number:
+print(abs(-3.14)) # 3.14    
+
+# Next I have the .pow() function, which will raise a base number to a power
+# The first argument is the base number
+# The second argument is the exponent (power) to raise the base number to
+print(pow(pi,2)) # 9.8596
+
+# Assuming I've imported the math module, then next up is the .sqrt() function, which will return the square root of a specified number
+print(math.sqrt(pi)) # 1.772004514666935
+
+# There's also the .max() function, which will return the _HIGHEST_ value of a specified number
+print(max(x, y, z)) # 3.0
+# Same goes for the .min() fucntion, which will return the _LOWEST_ value of a specified number
+print(min(x, y, z)) # 1.0
