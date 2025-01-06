@@ -225,4 +225,9 @@ print("Hello, " +name)
 # And then I _immediately__ cast that string input data type to an integer
 # But in order to use string concatenation, I have to convert it _BACK_ to a string
 age = int(input("Please enter your age: "))
-print("Hello, " +name, "you are " +str(age), "years old")
+print("Hello, " +name, ", you are " +str(age), "years old")
+
+# Only issue here is that if I submit a decimal as an input, I end up with an error!
+# Well, I need to typecast my input field as the _float_ data type to work around this
+height = float(input("Please enter your height in centimetres: "))
+print("Hello, " +name, ", you are " +str(age), "years old and " +str(height), "cm tall.")
