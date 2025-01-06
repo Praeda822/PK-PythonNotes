@@ -16,7 +16,7 @@ print("This is a simple Python string")
 # ======================
 #
 
-name = "Bro"
+name = "bro"
 print(name) # Bro
 
 # I can also typecast my variables to specified data types, just like with C#.
@@ -82,3 +82,67 @@ print(type(height)) # <class 'float'>
 
 human = True
 print("Are you a human: " +str(human))
+
+#
+#
+#  Multiple Assignments
+# ======================
+#
+# Multiple assignment allows me to assign multiple values to multiple variables in one line of code.
+
+# myname = "Pat"
+# myage = 31
+# myfuckability = True
+
+# So instead of having to shit out lines & lines of unnecessarily verbose code, I can do it all (_ideally) in one line of code!
+
+myname, myage, myfuckability = "Pat", 31, True
+
+print(myname)
+print(myage)
+print(myfuckability)
+
+# I can also use multiple assignments to minimise code redundancy:
+
+bikini_bottom = Patrick = Sandy = Spongebob = 30
+print(bikini_bottom) # 30
+#
+#
+#     String Methods
+# ======================
+#
+# Python has in-built methods for working with strings, just like JS
+# For instance, I can check the length of a string:
+print(len(name)) # 3 (Bro)
+
+# And there's a method for finding the index value, .find(), similar to indexOf()
+print(name.find("o")) # 2
+
+# I can also capitalise names with the .capitalize() method
+# Beats toUpperCase(), but not using the Queen's English bothers the fuck outta' me..
+print(name.capitalize()) # Bro
+
+# Same again for converting an entire string to uppercase
+print(name.upper()) # Bro
+# Same again for converting an entire string to lowercase
+print(name.lower()) # bro
+
+# I can also check if a string value is an integer using the isdigit() method:
+print(name.isdigit()) # False
+
+# I can check if my string contains any alphabetical characters
+# In this instance, it returns True, but if I had a space, or trailing whitespace, then it would return False
+print(name.isalpha()) # True
+
+# Next I have the .count() method, which will return the exact sum amount of _SPECIFIED_ characters within my string:
+print(name.count("o")) # 1
+
+# And I can also replace characters in my string using the .replace() method
+# The first argument is the character I want to replace
+# The second argument is the character I want to replace the first character with
+# Important to note that this _DOESN'T_ mutate the OG variable value
+print(name.replace("o","a")) # bra
+
+# Something really cool, with Python is that I can return a string _multiple times_ in _one line of code_!
+# I can achieve this by using the multiplication operator (*) as part of the print statement:
+print(name*3) # BroBroBro
