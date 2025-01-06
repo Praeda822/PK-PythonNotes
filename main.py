@@ -172,5 +172,31 @@ y = 2.0 # float
 z = "3" # str
 print("========== TYPE CASTING ==========")
 print(x)
-print(y)
+# I can typecast my float value into an integer by wrapping my variable with the int() function
+# Important to note that this _DOESN'T_ mutate the OG variable value, either!
+print(y) # 2.0
 print(z)
+
+# If I _do_ want to mutate the OG variable, then I would need to reassign it
+# Keeping in mind, that I can _still_ typecast the variable to a different data type:
+y = int(y)
+print(y) # 2
+
+# Now I can typecast my Z variable as an integer, as well:
+z = int(z)
+print(z) # 3
+
+# I can also typecast my integer values into floats by wrapping my variables with the float() function:
+x = float(x)
+print(x) # 1.0
+
+# Important to note here that when performing maths operations on a float and an integer, the result will always be a float.
+# This is because the float data type is more precise than the integer data type.
+# And when I uuse the multiplication operator with a string, I will get the string repeated the number of times specified by the integer specified.
+z = float(z)
+print(z*3) # 9.0
+
+# The main situation where I want to really get into Typecasting my variables is when I may want to display an integer with a float and/or a string.
+# In this instance, I can use the str() function to convert my integer to a string:
+print("X is: " +str(x)) # TypeError: can only concatenate str (not "float") to str
+print("Y is: " +str(x)) # Y is: 1.0
