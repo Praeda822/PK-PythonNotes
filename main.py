@@ -17,6 +17,7 @@ print("This is a simple Python string")
 #
 
 name = "bro"
+print("========== STRINGS ==========")
 print(name) # Bro
 
 # I can also typecast my variables to specified data types, just like with C#.
@@ -60,6 +61,7 @@ age += 1 # += works the same as JS, mutating the OG variable's value.
 #
 # In Python, however, I typecast in a slightly syntatically different, but less verbose, way:
 
+print("========== INTEGERS ==========")
 print("Your age is: " +str(age)) # Your age is 32
 #
 #
@@ -69,6 +71,7 @@ print("Your age is: " +str(age)) # Your age is 32
 # Floats are integers that can hold BOTH **whole** numbers, as well as **decimal** values.
 height = 189.0
 # Typecast the float to a string SO I can use string concatenation
+print("========== FLOATS ==========")
 print("Your height is: " +str(height) + "cm")
 print(type(height)) # <class 'float'>
 #
@@ -81,6 +84,7 @@ print(type(height)) # <class 'float'>
 # Important to note, Python is case-sensitive, so I need to make sure I'm using the correct case for my booleans.
 
 human = True
+print("========== BOOLEANS ==========")
 print("Are you a human: " +str(human))
 
 #
@@ -97,7 +101,7 @@ print("Are you a human: " +str(human))
 # So instead of having to shit out lines & lines of unnecessarily verbose code, I can do it all (_ideally) in one line of code!
 
 myname, myage, myfuckability = "Pat", 31, True
-
+print("========== SINGLE ASSIGNMENTS ==========")
 print(myname)
 print(myage)
 print(myfuckability)
@@ -105,6 +109,7 @@ print(myfuckability)
 # I can also use multiple assignments to minimise code redundancy:
 
 bikini_bottom = Patrick = Sandy = Spongebob = 30
+print("========== MULTIPLE ASSIGNMENTS ==========")
 print(bikini_bottom) # 30
 #
 #
@@ -113,36 +118,59 @@ print(bikini_bottom) # 30
 #
 # Python has in-built methods for working with strings, just like JS
 # For instance, I can check the length of a string:
+print("========== .length() METHOD ==========")
 print(len(name)) # 3 (Bro)
 
 # And there's a method for finding the index value, .find(), similar to indexOf()
+print("========== .find() METHOD ==========")
 print(name.find("o")) # 2
 
 # I can also capitalise names with the .capitalize() method
 # Beats toUpperCase(), but not using the Queen's English bothers the fuck outta' me..
+print("========== .capitalize() METHOD ==========")
 print(name.capitalize()) # Bro
 
 # Same again for converting an entire string to uppercase
+print("========== .upper() METHOD ==========")
 print(name.upper()) # Bro
 # Same again for converting an entire string to lowercase
+print("========== .lower() METHOD ==========")
 print(name.lower()) # bro
 
 # I can also check if a string value is an integer using the isdigit() method:
+print("========== .isdigit() METHOD ==========")
 print(name.isdigit()) # False
 
 # I can check if my string contains any alphabetical characters
 # In this instance, it returns True, but if I had a space, or trailing whitespace, then it would return False
+print("========== .isalpha() METHOD ==========")
 print(name.isalpha()) # True
 
 # Next I have the .count() method, which will return the exact sum amount of _SPECIFIED_ characters within my string:
+print("========== .count() METHOD ==========")
 print(name.count("o")) # 1
 
 # And I can also replace characters in my string using the .replace() method
 # The first argument is the character I want to replace
 # The second argument is the character I want to replace the first character with
 # Important to note that this _DOESN'T_ mutate the OG variable value
+print("========== .replace() METHOD ==========")
 print(name.replace("o","a")) # bra
 
 # Something really cool, with Python is that I can return a string _multiple times_ in _one line of code_!
 # I can achieve this by using the multiplication operator (*) as part of the print statement:
+print("========== MULTIPLIACTION OPERATOR ==========")
 print(name*3) # BroBroBro
+#
+#
+#     Type Casting
+# ======================
+#
+# Type casting is the process of converting the value of one data type (integer, string, float, etc.) to another data type.
+x = 1 # int
+y = 2.0 # float
+z = "3" # str
+print("========== TYPE CASTING ==========")
+print(x)
+print(y)
+print(z)
